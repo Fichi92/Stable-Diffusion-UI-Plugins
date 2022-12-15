@@ -118,7 +118,7 @@
     const tabContainer = document.querySelector('#tab-container')
     tabContainer?.insertAdjacentHTML('beforeend', `
         <span id="tab-footer" class="tab">
-            <span><i class="fa fa-circle-info icon"></i> About</span>
+            <span><i class="fa fa-circle-info icon"></i> About & Tip jar</span>
         </span>
     `)
     const tabFooter = document.querySelector('#tab-footer')
