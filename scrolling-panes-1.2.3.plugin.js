@@ -10,7 +10,7 @@
     var styleSheet = document.createElement("style")
     styleSheet.textContent = `
         @media (min-width: 700px) {
-            body#tab-main.active {
+            body {
                 overflow-y: hidden;
             }
             
