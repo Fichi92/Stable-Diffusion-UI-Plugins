@@ -182,7 +182,7 @@
         }
         else
         {
-            document.body.style.overflowY = ''
+            document.body.style.overflowY = 'auto'
         }
     })
 
