@@ -2,18 +2,18 @@
     Restore Image Modifiers
     by Patrice
 
-    Restores the image modifier cards upon reloading the page.
+    Restores the image modifier cards upon reloading the page. VErsion 1.1 loads much faster, improved reliability. Requires Easy Diffusion 2.5.2 or later.
 */
 (function () {
     "use strict"
 
-    // save/restore the desired language
+    // save image modifiers upon update
     document.addEventListener("refreshImageModifiers", function(e) {
         localStorage.setItem('image_modifiers', JSON.stringify(activeTags))
         return true
     })
 
-    // reload the image modifiers
+    // reload image modifiers at start
     document.addEventListener("loadImageModifiers", function(e) {
         let savedTags = JSON.parse(localStorage.getItem('image_modifiers'))
         let active_tags = savedTags == null ? [] : savedTags.map(x => x.name)
