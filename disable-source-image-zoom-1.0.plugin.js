@@ -2,7 +2,7 @@
     Disable Source Image Zoom
     by Patrice
 
-    Adds a system setting to disable the soure image zoom on hover in the task list.
+    Adds a system setting to disable the source image zoom on hover in the task list.
 */
 (function() {
     "use strict"
