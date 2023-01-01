@@ -3,7 +3,7 @@
     by Patrice
 
     Adds a system setting to allow the user to change the action to display the buttons on an image (rather than just hovering over it). Default is set to hover (current UI behavior), can be changed to use mouse buttons in the system settings.
-    Also adds an option to disable the right-click contextual menu on most elements of the page (still allowed in input and text boxes)
+    Also adds an option to disable the right-click contextual menu on most elements of the page. Right click still works in input and text boxes, as well as on images (unless context menu is set to right-click).
 */
 (function() {
     "use strict"
@@ -103,7 +103,7 @@
     /* Mouse events */
     // disable context menu as needed
     window.addEventListener('contextmenu', (event) => {
-        const ALLOW_RIGHT_CLICK = ['TEXTAREA', 'INPUT']
+        const ALLOW_RIGHT_CLICK = ['TEXTAREA', 'INPUT', 'IMG']
         if ((disableRightClick.checked && ALLOW_RIGHT_CLICK.find(elem => elem == event.target.nodeName) == undefined) || clickedOnImage(event)) {
             event.preventDefault()
         }
