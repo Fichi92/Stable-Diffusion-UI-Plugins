@@ -22,7 +22,12 @@
 
     // empty models
     function removeOptions(selectElement) {
-        selectElement.innerHTML = ''
+        if (selectElement !== undefined) {
+            let i, L = selectElement.options.length - 1
+            for(i = L; i >= 0; i--) {
+                selectElement.remove(i)
+            }
+        }
     }
 
     // reload models button
